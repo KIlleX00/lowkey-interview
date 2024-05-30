@@ -8,24 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */; };
-		CCAB2A0D2C08F92C008A83CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A0C2C08F92C008A83CA /* ContentView.swift */; };
 		CCAB2A0F2C08F92E008A83CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */; };
 		CCAB2A122C08F92E008A83CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */; };
 		CCAB2A1A2C08F9C7008A83CA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CCAB2A192C08F9C7008A83CA /* Lottie */; };
 		CCAB2A1D2C08F9FE008A83CA /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A1C2C08F9FE008A83CA /* RestApi.swift */; };
 		CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A1F2C08FA6F008A83CA /* PexelsModels.swift */; };
 		CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A212C08FA7C008A83CA /* PexelsApi.swift */; };
+		CCAB2A262C0901BD008A83CA /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A252C0901BD008A83CA /* SplashViewModel.swift */; };
+		CCAB2A292C0901E0008A83CA /* CombineExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A282C0901E0008A83CA /* CombineExtensions.swift */; };
+		CCAB2A2B2C0901FC008A83CA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A2A2C0901FC008A83CA /* SplashView.swift */; };
+		CCAB2A312C090DD6008A83CA /* logo_text_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A302C090DD6008A83CA /* logo_text_animation.json */; };
+		CCAB2A342C090EE0008A83CA /* PexelatorProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A332C090EE0008A83CA /* PexelatorProgressViewStyle.swift */; };
+		CCAB2A362C091FF0008A83CA /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A352C091FF0008A83CA /* RootViewModel.swift */; };
+		CCAB2A382C092204008A83CA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A372C092204008A83CA /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CCAB2A072C08F92C008A83CA /* Pexelator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pexelator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorApp.swift; sourceTree = "<group>"; };
-		CCAB2A0C2C08F92C008A83CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CCAB2A1C2C08F9FE008A83CA /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		CCAB2A1F2C08FA6F008A83CA /* PexelsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsModels.swift; sourceTree = "<group>"; };
 		CCAB2A212C08FA7C008A83CA /* PexelsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsApi.swift; sourceTree = "<group>"; };
+		CCAB2A252C0901BD008A83CA /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		CCAB2A282C0901E0008A83CA /* CombineExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineExtensions.swift; sourceTree = "<group>"; };
+		CCAB2A2A2C0901FC008A83CA /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		CCAB2A302C090DD6008A83CA /* logo_text_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_text_animation.json; sourceTree = "<group>"; };
+		CCAB2A332C090EE0008A83CA /* PexelatorProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorProgressViewStyle.swift; sourceTree = "<group>"; };
+		CCAB2A352C091FF0008A83CA /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		CCAB2A372C092204008A83CA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +71,13 @@
 		CCAB2A092C08F92C008A83CA /* Pexelator */ = {
 			isa = PBXGroup;
 			children = (
+				CCAB2A272C0901D2008A83CA /* Utils */,
 				CCAB2A1B2C08F9F5008A83CA /* API */,
+				CCAB2A232C090198008A83CA /* ViewModels */,
+				CCAB2A242C0901A5008A83CA /* Views */,
+				CCAB2A322C090EBA008A83CA /* Style */,
 				CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */,
-				CCAB2A0C2C08F92C008A83CA /* ContentView.swift */,
+				CCAB2A2C2C09064D008A83CA /* Resuorces */,
 				CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */,
 				CCAB2A102C08F92E008A83CA /* Preview Content */,
 			);
@@ -92,6 +108,56 @@
 				CCAB2A212C08FA7C008A83CA /* PexelsApi.swift */,
 			);
 			path = PexelsApi;
+			sourceTree = "<group>";
+		};
+		CCAB2A232C090198008A83CA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A352C091FF0008A83CA /* RootViewModel.swift */,
+				CCAB2A252C0901BD008A83CA /* SplashViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CCAB2A242C0901A5008A83CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A372C092204008A83CA /* RootView.swift */,
+				CCAB2A2A2C0901FC008A83CA /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CCAB2A272C0901D2008A83CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A282C0901E0008A83CA /* CombineExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CCAB2A2C2C09064D008A83CA /* Resuorces */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A2D2C090657008A83CA /* LottieAnimations */,
+			);
+			path = Resuorces;
+			sourceTree = "<group>";
+		};
+		CCAB2A2D2C090657008A83CA /* LottieAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A302C090DD6008A83CA /* logo_text_animation.json */,
+			);
+			path = LottieAnimations;
+			sourceTree = "<group>";
+		};
+		CCAB2A322C090EBA008A83CA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A332C090EE0008A83CA /* PexelatorProgressViewStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAB2A312C090DD6008A83CA /* logo_text_animation.json in Resources */,
 				CCAB2A122C08F92E008A83CA /* Preview Assets.xcassets in Resources */,
 				CCAB2A0F2C08F92E008A83CA /* Assets.xcassets in Resources */,
 			);
@@ -170,10 +237,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCAB2A0D2C08F92C008A83CA /* ContentView.swift in Sources */,
+				CCAB2A342C090EE0008A83CA /* PexelatorProgressViewStyle.swift in Sources */,
+				CCAB2A2B2C0901FC008A83CA /* SplashView.swift in Sources */,
 				CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */,
 				CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */,
+				CCAB2A382C092204008A83CA /* RootView.swift in Sources */,
+				CCAB2A262C0901BD008A83CA /* SplashViewModel.swift in Sources */,
+				CCAB2A292C0901E0008A83CA /* CombineExtensions.swift in Sources */,
 				CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */,
+				CCAB2A362C091FF0008A83CA /* RootViewModel.swift in Sources */,
 				CCAB2A1D2C08F9FE008A83CA /* RestApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
