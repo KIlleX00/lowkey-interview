@@ -12,6 +12,9 @@
 		CCAB2A0F2C08F92E008A83CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */; };
 		CCAB2A122C08F92E008A83CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */; };
 		CCAB2A1A2C08F9C7008A83CA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CCAB2A192C08F9C7008A83CA /* Lottie */; };
+		CCAB2A1D2C08F9FE008A83CA /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A1C2C08F9FE008A83CA /* RestApi.swift */; };
+		CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A1F2C08FA6F008A83CA /* PexelsModels.swift */; };
+		CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A212C08FA7C008A83CA /* PexelsApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		CCAB2A0C2C08F92C008A83CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCAB2A1C2C08F9FE008A83CA /* RestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
+		CCAB2A1F2C08FA6F008A83CA /* PexelsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsModels.swift; sourceTree = "<group>"; };
+		CCAB2A212C08FA7C008A83CA /* PexelsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		CCAB2A092C08F92C008A83CA /* Pexelator */ = {
 			isa = PBXGroup;
 			children = (
+				CCAB2A1B2C08F9F5008A83CA /* API */,
 				CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */,
 				CCAB2A0C2C08F92C008A83CA /* ContentView.swift */,
 				CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */,
@@ -67,6 +74,24 @@
 				CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCAB2A1B2C08F9F5008A83CA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A1E2C08FA60008A83CA /* PexelsApi */,
+				CCAB2A1C2C08F9FE008A83CA /* RestApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CCAB2A1E2C08FA60008A83CA /* PexelsApi */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB2A1F2C08FA6F008A83CA /* PexelsModels.swift */,
+				CCAB2A212C08FA7C008A83CA /* PexelsApi.swift */,
+			);
+			path = PexelsApi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +172,9 @@
 			files = (
 				CCAB2A0D2C08F92C008A83CA /* ContentView.swift in Sources */,
 				CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */,
+				CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */,
+				CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */,
+				CCAB2A1D2C08F9FE008A83CA /* RestApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +314,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,9 +325,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeflow.killex.test.Pexelator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,9 +349,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,9 +360,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.codeflow.killex.test.Pexelator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
