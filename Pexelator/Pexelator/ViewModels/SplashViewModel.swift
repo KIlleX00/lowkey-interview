@@ -2,27 +2,41 @@ import Combine
 import SwiftUI
 import Lottie
 
+/// ViewModel for managing the splash screen logic, including animation and data preloading.
 class SplashViewModel: ObservableObject {
     
     // MARK: - Output
     
+    /// Published property to control the playback mode of the logo animation.
     @Published var logoPlaybackMode = LottiePlaybackMode.paused(at: .progress(0))
+    
+    /// Published property to control the opacity of the progress view.
     @Published var progressViewOpacity = 0.0
     
     // MARK: - Properties
     
+    /// Unique identifier for the ViewModel instance.
     let id = UUID().uuidString
     
+    /// Weak reference to the navigation coordinator for handling navigation events.
     weak var navigationCoordinator: NavigationCoordinator?
     
+    /// Subject to track the completion status of the logo animation.
     private let hasCompletedLogoAnimation = CurrentValueSubject<Bool, Never>(false)
+    
+    /// Subject to track the data preloading status.
     private let isPreloadingData = CurrentValueSubject<Bool, Never>(true)
+    
+    /// Subject to store the response from the Pexels API.
     private let response = CurrentValueSubject<CuratedPhotosResponse?, Never>(nil)
     
+    /// Composite cancellable to manage multiple cancellable tasks.
     private let cancellables = CompositeCancellable()
     
     // MARK: - Lifecycle
     
+    /// Initializes the ViewModel with the given Pexels API.
+    /// - Parameter pexelsApi: The Pexels API instance for fetching curated photos.
     init(pexelsApi: PexelsApi) {
         cancellables += isPreloadingData
             .combineLatest(hasCompletedLogoAnimation)
@@ -48,18 +62,21 @@ class SplashViewModel: ObservableObject {
         }
     }
     
+    /// Cancels all ongoing tasks when the ViewModel is deallocated.
     deinit {
         cancellables.cancel()
     }
     
     // MARK: - Interface
     
+    /// Called when the view appears. Starts the logo animation after a delay.
     func viewDidAppear() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.logoPlaybackMode = .playing(.fromProgress(0, toProgress: 1, loopMode: .playOnce))
         }
     }
     
+    /// Called when the logo animation finishes. Updates the completion status of the logo animation.
     func logoAnimationDidFinish() {
         hasCompletedLogoAnimation.value = true
     }
