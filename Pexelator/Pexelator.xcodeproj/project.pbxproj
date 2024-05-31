@@ -13,6 +13,9 @@
 		CC4317AD2C094C6B00007DD0 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317AC2C094C6B00007DD0 /* CachedAsyncImage.swift */; };
 		CC4317AF2C0956F400007DD0 /* CachedAsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */; };
 		CC4317B12C095BFE00007DD0 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317B02C095BFE00007DD0 /* SwiftUIExtensions.swift */; };
+		CC60E2842C09FFA500EBAA81 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E2832C09FFA500EBAA81 /* AlertViewModel.swift */; };
+		CC60E2872C0A015A00EBAA81 /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E2862C0A015A00EBAA81 /* AlertModifier.swift */; };
+		CC60E2892C0A031D00EBAA81 /* PexelatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E2882C0A031D00EBAA81 /* PexelatorButtonStyle.swift */; };
 		CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */; };
 		CCAB2A0F2C08F92E008A83CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */; };
 		CCAB2A122C08F92E008A83CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		CC4317AC2C094C6B00007DD0 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImageViewModel.swift; sourceTree = "<group>"; };
 		CC4317B02C095BFE00007DD0 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
+		CC60E2832C09FFA500EBAA81 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		CC60E2862C0A015A00EBAA81 /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
+		CC60E2882C0A031D00EBAA81 /* PexelatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorButtonStyle.swift; sourceTree = "<group>"; };
 		CCAB2A072C08F92C008A83CA /* Pexelator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pexelator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorApp.swift; sourceTree = "<group>"; };
 		CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC60E2852C0A014900EBAA81 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				CC60E2862C0A015A00EBAA81 /* AlertModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		CCAB29FE2C08F92C008A83CA = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +102,7 @@
 				CCAB2A232C090198008A83CA /* ViewModels */,
 				CCAB2A242C0901A5008A83CA /* Views */,
 				CCAB2A322C090EBA008A83CA /* Style */,
+				CC60E2852C0A014900EBAA81 /* Modifiers */,
 				CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */,
 				CCAB2A2C2C09064D008A83CA /* Resuorces */,
 				CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */,
@@ -129,6 +144,7 @@
 				CCAB2A252C0901BD008A83CA /* SplashViewModel.swift */,
 				CC4317A22C093F7000007DD0 /* PhotoListViewModel.swift */,
 				CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */,
+				CC60E2832C09FFA500EBAA81 /* AlertViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -174,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				CCAB2A332C090EE0008A83CA /* PexelatorProgressViewStyle.swift */,
+				CC60E2882C0A031D00EBAA81 /* PexelatorButtonStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -259,6 +276,7 @@
 				CCAB2A2B2C0901FC008A83CA /* SplashView.swift in Sources */,
 				CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */,
 				CC4317A32C093F7000007DD0 /* PhotoListViewModel.swift in Sources */,
+				CC60E2892C0A031D00EBAA81 /* PexelatorButtonStyle.swift in Sources */,
 				CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */,
 				CCAB2A382C092204008A83CA /* RootView.swift in Sources */,
 				CCAB2A262C0901BD008A83CA /* SplashViewModel.swift in Sources */,
@@ -266,7 +284,9 @@
 				CC4317AF2C0956F400007DD0 /* CachedAsyncImageViewModel.swift in Sources */,
 				CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */,
 				CC4317AB2C094AE900007DD0 /* PhotoItemView.swift in Sources */,
+				CC60E2842C09FFA500EBAA81 /* AlertViewModel.swift in Sources */,
 				CCAB2A362C091FF0008A83CA /* RootViewModel.swift in Sources */,
+				CC60E2872C0A015A00EBAA81 /* AlertModifier.swift in Sources */,
 				CCAB2A1D2C08F9FE008A83CA /* RestApi.swift in Sources */,
 				CC4317B12C095BFE00007DD0 /* SwiftUIExtensions.swift in Sources */,
 				CC4317AD2C094C6B00007DD0 /* CachedAsyncImage.swift in Sources */,

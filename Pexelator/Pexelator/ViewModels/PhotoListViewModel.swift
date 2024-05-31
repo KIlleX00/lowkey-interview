@@ -14,6 +14,8 @@ class PhotoListViewModel: ObservableObject {
     /// Indicates whether the next page of photos is currently being loaded.
     @Published var isFetchingNextPage = false
     
+    let alertViewModel = AlertViewModel()
+    
     // MARK: - Properties
     
     let id = UUID().uuidString
@@ -72,7 +74,7 @@ class PhotoListViewModel: ObservableObject {
                 self.previousResponse = response.content
                 self.photos = response.content.photos
             } catch {
-                print(error)
+                self.alertViewModel.showAlert(for: error)
             }
             self.isLoadingFirstPage = false
         }
@@ -102,7 +104,7 @@ class PhotoListViewModel: ObservableObject {
                     self.photos += validPhotos
                 }
             } catch {
-                print(error)
+                self.alertViewModel.showAlert(for: error)
             }
             await MainActor.run {
                 self.isFetchingNextPage = false

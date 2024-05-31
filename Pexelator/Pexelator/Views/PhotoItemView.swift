@@ -31,11 +31,11 @@ struct PhotoItemView: View {
                     Spacer()
                 }.padding()
                     .background(.ultraThinMaterial)
-                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 12, height: 12)))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
                     .padding()
             }.frame(width: imageWidth, height: width - spacing)
         }.frame(width: imageWidth, height: width - spacing)
-            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+            .clipShape(RoundedRectangle(cornerRadius: 20))
             .shadow(radius: 5)
             .padding(EdgeInsets(top: spacing / 2, leading: spacing, bottom: spacing / 2, trailing: spacing))
     }

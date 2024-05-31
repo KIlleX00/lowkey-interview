@@ -28,6 +28,7 @@ struct PhotoListView: View {
                 .scrollIndicators(.hidden)
                 .animation(.easeIn, value: viewModel.photos)
                 .navigationTitle("Curated Photos")
+                .alert(viewModel: viewModel.alertViewModel)
                 .refreshable {
                     viewModel.fetchFirstPageOfUsers()
                 }

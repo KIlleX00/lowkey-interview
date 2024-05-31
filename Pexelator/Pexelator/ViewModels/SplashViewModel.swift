@@ -13,6 +13,11 @@ class SplashViewModel: ObservableObject {
     /// Published property to control the opacity of the progress view.
     @Published var progressViewOpacity = 0.0
     
+    /// Published property to control the visibility of Try Again button.
+    @Published var isTryAgainButtonHidden = true
+    
+    let alertViewModel = AlertViewModel()
+    
     // MARK: - Properties
     
     /// Unique identifier for the ViewModel instance.
@@ -33,11 +38,16 @@ class SplashViewModel: ObservableObject {
     /// Composite cancellable to manage multiple cancellable tasks.
     private let cancellables = CompositeCancellable()
     
+    /// API used to perform networing requests.
+    private let pexelsApi: PexelsApi
+    
     // MARK: - Lifecycle
     
     /// Initializes the ViewModel with the given Pexels API.
     /// - Parameter pexelsApi: The Pexels API instance for fetching curated photos.
     init(pexelsApi: PexelsApi) {
+        self.pexelsApi = pexelsApi
+        
         cancellables += isPreloadingData
             .combineLatest(hasCompletedLogoAnimation)
             .map { $0 && $1 ? 1.0 : 0.0 }
@@ -51,15 +61,7 @@ class SplashViewModel: ObservableObject {
                 navigationCoordinator.replaceRoot(.photoList(PhotoListViewModel(pexelsApi: pexelsApi, navigationCoordinator: navigationCoordinator, preloadedResponse: response)))
             })
         
-        Task { @MainActor [weak self] in
-            do {
-                let response = try await pexelsApi.curatedPhotos(page: 1, pageSize: 20)
-                self?.response.value = response.content
-                self?.isPreloadingData.value = false
-            } catch {
-                print(error)
-            }
-        }
+        preloadData()
     }
     
     /// Cancels all ongoing tasks when the ViewModel is deallocated.
@@ -79,6 +81,23 @@ class SplashViewModel: ObservableObject {
     /// Called when the logo animation finishes. Updates the completion status of the logo animation.
     func logoAnimationDidFinish() {
         hasCompletedLogoAnimation.value = true
+    }
+    
+    /// Preloads data that will be displayed on the Photo List screen.
+    func preloadData() {
+        isPreloadingData.value = true
+        isTryAgainButtonHidden = true
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            do {
+                let response = try await self.pexelsApi.curatedPhotos(page: 1, pageSize: 20)
+                self.response.value = response.content
+            } catch {
+                self.alertViewModel.showAlert(for: error)
+                self.isTryAgainButtonHidden = false
+            }
+            self.isPreloadingData.value = false
+        }
     }
     
 }
