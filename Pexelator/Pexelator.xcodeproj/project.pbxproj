@@ -16,6 +16,8 @@
 		CC60E2842C09FFA500EBAA81 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E2832C09FFA500EBAA81 /* AlertViewModel.swift */; };
 		CC60E2872C0A015A00EBAA81 /* AlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E2862C0A015A00EBAA81 /* AlertModifier.swift */; };
 		CC60E2892C0A031D00EBAA81 /* PexelatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E2882C0A031D00EBAA81 /* PexelatorButtonStyle.swift */; };
+		CC60E28B2C0A0C9F00EBAA81 /* PhotoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E28A2C0A0C9F00EBAA81 /* PhotoDetailsViewModel.swift */; };
+		CC60E28D2C0A0CF500EBAA81 /* PhotoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60E28C2C0A0CF500EBAA81 /* PhotoDetailsView.swift */; };
 		CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */; };
 		CCAB2A0F2C08F92E008A83CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */; };
 		CCAB2A122C08F92E008A83CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		CC60E2832C09FFA500EBAA81 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		CC60E2862C0A015A00EBAA81 /* AlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModifier.swift; sourceTree = "<group>"; };
 		CC60E2882C0A031D00EBAA81 /* PexelatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorButtonStyle.swift; sourceTree = "<group>"; };
+		CC60E28A2C0A0C9F00EBAA81 /* PhotoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewModel.swift; sourceTree = "<group>"; };
+		CC60E28C2C0A0CF500EBAA81 /* PhotoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsView.swift; sourceTree = "<group>"; };
 		CCAB2A072C08F92C008A83CA /* Pexelator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pexelator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorApp.swift; sourceTree = "<group>"; };
 		CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				CCAB2A352C091FF0008A83CA /* RootViewModel.swift */,
 				CCAB2A252C0901BD008A83CA /* SplashViewModel.swift */,
 				CC4317A22C093F7000007DD0 /* PhotoListViewModel.swift */,
+				CC60E28A2C0A0C9F00EBAA81 /* PhotoDetailsViewModel.swift */,
 				CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */,
 				CC60E2832C09FFA500EBAA81 /* AlertViewModel.swift */,
 			);
@@ -156,6 +161,7 @@
 				CCAB2A2A2C0901FC008A83CA /* SplashView.swift */,
 				CC4317A42C093F7D00007DD0 /* PhotoListView.swift */,
 				CC4317AA2C094AE900007DD0 /* PhotoItemView.swift */,
+				CC60E28C2C0A0CF500EBAA81 /* PhotoDetailsView.swift */,
 				CC4317AC2C094C6B00007DD0 /* CachedAsyncImage.swift */,
 			);
 			path = Views;
@@ -278,12 +284,14 @@
 				CC4317A32C093F7000007DD0 /* PhotoListViewModel.swift in Sources */,
 				CC60E2892C0A031D00EBAA81 /* PexelatorButtonStyle.swift in Sources */,
 				CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */,
+				CC60E28B2C0A0C9F00EBAA81 /* PhotoDetailsViewModel.swift in Sources */,
 				CCAB2A382C092204008A83CA /* RootView.swift in Sources */,
 				CCAB2A262C0901BD008A83CA /* SplashViewModel.swift in Sources */,
 				CCAB2A292C0901E0008A83CA /* CombineExtensions.swift in Sources */,
 				CC4317AF2C0956F400007DD0 /* CachedAsyncImageViewModel.swift in Sources */,
 				CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */,
 				CC4317AB2C094AE900007DD0 /* PhotoItemView.swift in Sources */,
+				CC60E28D2C0A0CF500EBAA81 /* PhotoDetailsView.swift in Sources */,
 				CC60E2842C09FFA500EBAA81 /* AlertViewModel.swift in Sources */,
 				CCAB2A362C091FF0008A83CA /* RootViewModel.swift in Sources */,
 				CC60E2872C0A015A00EBAA81 /* AlertModifier.swift in Sources */,

@@ -3,7 +3,6 @@ import Foundation
 struct PexelsPhoto: Codable {
     let id: Int
     let photographer: String
-    let photographerUrl: URL
     let avgColor: String
     let alt: String
     let src: Source

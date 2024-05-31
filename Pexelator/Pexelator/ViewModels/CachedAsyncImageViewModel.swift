@@ -36,6 +36,9 @@ class CachedAsyncImageViewModel: ObservableObject {
     /// - Parameter url: The URL of the image to be loaded.
     init(url: URL?) {
         self.url = url
+        if let url, let image = CachedAsyncImageViewModel.imageCache.object(forKey: url as NSURL) {
+            self.image = image
+        }
     }
     
     /// Cancels ongoing tasks when the ViewModel is deallocated.
@@ -127,7 +130,7 @@ class CachedAsyncImageViewModel: ObservableObject {
     ///   - url: The URL of the image to be used as a key.
     private func saveImageToDisk(image: UIImage, url: URL) {
         guard let fileURL = cachedImageUrl(for: url),
-              let data = image.pngData() else { return }
+              let data = image.jpegData(compressionQuality: 1.0) else { return }
         try? data.write(to: fileURL)
     }
     

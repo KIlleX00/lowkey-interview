@@ -3,8 +3,6 @@ import SwiftUI
 
 class PhotoListViewModel: ObservableObject {
     
-    // MARK: - Input
-    
     // MARK: - Output
     
     /// The list of photos to be displayed.
@@ -23,6 +21,7 @@ class PhotoListViewModel: ObservableObject {
     private let cancellables = CompositeCancellable()
     
     private let pexelsApi: PexelsApi
+    private let navigationCoordinator: NavigationCoordinator
     
     private var previousResponse: CuratedPhotosResponse?
     
@@ -33,6 +32,7 @@ class PhotoListViewModel: ObservableObject {
     
     init(pexelsApi: PexelsApi, navigationCoordinator: NavigationCoordinator, preloadedResponse: CuratedPhotosResponse? = nil) {
         self.pexelsApi = pexelsApi
+        self.navigationCoordinator = navigationCoordinator
         
         if let preloadedResponse {
             previousResponse = preloadedResponse
@@ -56,6 +56,12 @@ class PhotoListViewModel: ObservableObject {
         // Fetch next page only when one of the last 10 items is visible to the user.
         fetchNextPageOfUsers()
         
+    }
+    
+    func photoTapAction(_ photo: PexelsPhoto, namespace: Namespace.ID) {
+        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+            navigationCoordinator.present(NavigationPresentedElement(screen: .photoDetails(PhotoDetailsViewModel(photo: photo, navigationCoordinator: navigationCoordinator)), namespace: namespace))
+        }
     }
     
     // MARK: - Data fetch
