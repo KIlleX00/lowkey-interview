@@ -10,8 +10,8 @@ struct RootView: View {
                 switch viewModel.rootElement {
                 case .splash(let viewModel):
                     SplashView(viewModel: viewModel)
-                case .text(let title):
-                    Text(title)
+                case .photoList(let viewModel):
+                    PhotoListView(viewModel: viewModel)
                 }
             }.navigationDestination(for: NavigationCoordinatorPath.self) { path in
                     switch path {

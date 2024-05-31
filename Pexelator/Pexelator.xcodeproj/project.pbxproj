@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC4317A32C093F7000007DD0 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317A22C093F7000007DD0 /* PhotoListViewModel.swift */; };
+		CC4317A52C093F7D00007DD0 /* PhotoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317A42C093F7D00007DD0 /* PhotoListView.swift */; };
+		CC4317AB2C094AE900007DD0 /* PhotoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317AA2C094AE900007DD0 /* PhotoItemView.swift */; };
+		CC4317AD2C094C6B00007DD0 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317AC2C094C6B00007DD0 /* CachedAsyncImage.swift */; };
+		CC4317AF2C0956F400007DD0 /* CachedAsyncImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */; };
+		CC4317B12C095BFE00007DD0 /* SwiftUIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4317B02C095BFE00007DD0 /* SwiftUIExtensions.swift */; };
 		CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */; };
 		CCAB2A0F2C08F92E008A83CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */; };
 		CCAB2A122C08F92E008A83CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAB2A112C08F92E008A83CA /* Preview Assets.xcassets */; };
@@ -24,6 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC4317A22C093F7000007DD0 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		CC4317A42C093F7D00007DD0 /* PhotoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListView.swift; sourceTree = "<group>"; };
+		CC4317AA2C094AE900007DD0 /* PhotoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemView.swift; sourceTree = "<group>"; };
+		CC4317AC2C094C6B00007DD0 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
+		CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImageViewModel.swift; sourceTree = "<group>"; };
+		CC4317B02C095BFE00007DD0 /* SwiftUIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExtensions.swift; sourceTree = "<group>"; };
 		CCAB2A072C08F92C008A83CA /* Pexelator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pexelator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAB2A0A2C08F92C008A83CA /* PexelatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelatorApp.swift; sourceTree = "<group>"; };
 		CCAB2A0E2C08F92E008A83CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +127,8 @@
 			children = (
 				CCAB2A352C091FF0008A83CA /* RootViewModel.swift */,
 				CCAB2A252C0901BD008A83CA /* SplashViewModel.swift */,
+				CC4317A22C093F7000007DD0 /* PhotoListViewModel.swift */,
+				CC4317AE2C0956F400007DD0 /* CachedAsyncImageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +138,9 @@
 			children = (
 				CCAB2A372C092204008A83CA /* RootView.swift */,
 				CCAB2A2A2C0901FC008A83CA /* SplashView.swift */,
+				CC4317A42C093F7D00007DD0 /* PhotoListView.swift */,
+				CC4317AA2C094AE900007DD0 /* PhotoItemView.swift */,
+				CC4317AC2C094C6B00007DD0 /* CachedAsyncImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				CCAB2A282C0901E0008A83CA /* CombineExtensions.swift */,
+				CC4317B02C095BFE00007DD0 /* SwiftUIExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -240,13 +258,19 @@
 				CCAB2A342C090EE0008A83CA /* PexelatorProgressViewStyle.swift in Sources */,
 				CCAB2A2B2C0901FC008A83CA /* SplashView.swift in Sources */,
 				CCAB2A0B2C08F92C008A83CA /* PexelatorApp.swift in Sources */,
+				CC4317A32C093F7000007DD0 /* PhotoListViewModel.swift in Sources */,
 				CCAB2A202C08FA6F008A83CA /* PexelsModels.swift in Sources */,
 				CCAB2A382C092204008A83CA /* RootView.swift in Sources */,
 				CCAB2A262C0901BD008A83CA /* SplashViewModel.swift in Sources */,
 				CCAB2A292C0901E0008A83CA /* CombineExtensions.swift in Sources */,
+				CC4317AF2C0956F400007DD0 /* CachedAsyncImageViewModel.swift in Sources */,
 				CCAB2A222C08FA7C008A83CA /* PexelsApi.swift in Sources */,
+				CC4317AB2C094AE900007DD0 /* PhotoItemView.swift in Sources */,
 				CCAB2A362C091FF0008A83CA /* RootViewModel.swift in Sources */,
 				CCAB2A1D2C08F9FE008A83CA /* RestApi.swift in Sources */,
+				CC4317B12C095BFE00007DD0 /* SwiftUIExtensions.swift in Sources */,
+				CC4317AD2C094C6B00007DD0 /* CachedAsyncImage.swift in Sources */,
+				CC4317A52C093F7D00007DD0 /* PhotoListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

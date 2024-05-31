@@ -3,7 +3,7 @@ import SwiftUI
 
 enum NavigationRootElement {
     case splash(SplashViewModel)
-    case text(String)
+    case photoList(PhotoListViewModel)
 }
 
 enum NavigationCoordinatorPath: Hashable {

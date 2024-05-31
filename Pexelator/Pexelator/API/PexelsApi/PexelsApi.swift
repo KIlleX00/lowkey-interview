@@ -90,13 +90,14 @@ enum PexelsApiError: Error {
 
 class PexelsMockedApi: PexelsApi {
     
+    static let photos = [
+        PexelsPhoto(id: 1, photographer: "Cristian Gligor", photographerUrl: URL(string: "https://www.pexels.com/@cristian-gligor-1311859590")!, avgColor: "#5D3D32", alt: "Red", src: .init(original: URL(string: "https://www.pexels.com/photo/red-24821324/")!)),
+        PexelsPhoto(id: 2, photographer: "Jack Atkinson", photographerUrl: URL(string: "https://www.pexels.com/@jack-atkinson-1289771108")!, avgColor: "#CDCFC2", alt: "FASHION EASTERN DRESSES", src: .init(original: URL(string: "https://www.pexels.com/photo/fashion-eastern-dresses-25185005/")!)),
+        PexelsPhoto(id: 3, photographer: "Henry Acevedo", photographerUrl: URL(string: "https://www.pexels.com/@henry-acevedo-382866382")!, avgColor: "#4F4F4F", alt: "", src: .init(original: URL(string: "https://www.pexels.com/photo/a-black-and-white-photo-of-a-gate-24988214/")!))
+    ]
+    
     func curatedPhotos(page: Int, pageSize: Int) async throws -> RestResponse<CuratedPhotosResponse, EmptyResponseHeadersDecodable> {
-        let photos = [
-            PexelsPhoto(id: 1, url: URL(string: "https://www.pexels.com/photo/red-24821324/")!, photographer: "Cristian Gligor", photographerUrl: URL(string: "https://www.pexels.com/@cristian-gligor-1311859590")!, avgColor: "#5D3D32", alt: "Red"),
-            PexelsPhoto(id: 2, url: URL(string: "https://www.pexels.com/photo/fashion-eastern-dresses-25185005/")!, photographer: "Jack Atkinson", photographerUrl: URL(string: "https://www.pexels.com/@jack-atkinson-1289771108")!, avgColor: "#CDCFC2", alt: "FASHION EASTERN DRESSES"),
-            PexelsPhoto(id: 3, url: URL(string: "https://www.pexels.com/photo/a-black-and-white-photo-of-a-gate-24988214/")!, photographer: "Henry Acevedo", photographerUrl: URL(string: "https://www.pexels.com/@henry-acevedo-382866382")!, avgColor: "#4F4F4F", alt: "")
-        ]
-        let photosResponse = CuratedPhotosResponse(nextPage: nil, photos: photos)
+        let photosResponse = CuratedPhotosResponse(nextPage: nil, photos: PexelsMockedApi.photos)
         return RestResponse(headers: EmptyResponseHeadersDecodable(headers: [:]), content: photosResponse)
     }
     

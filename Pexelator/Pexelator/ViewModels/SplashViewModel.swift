@@ -32,8 +32,9 @@ class SplashViewModel: ObservableObject {
         cancellables += response
             .combineLatest(hasCompletedLogoAnimation)
             .filter { $0 != nil && $1 }
-            .sinkOnMain(receiveValue: { [weak self] _ in
-                self?.navigationCoordinator?.replaceRoot(.text("Image List"))
+            .sinkOnMain(receiveValue: { [weak self] response, _ in
+                guard let navigationCoordinator = self?.navigationCoordinator else { return }
+                navigationCoordinator.replaceRoot(.photoList(PhotoListViewModel(pexelsApi: pexelsApi, navigationCoordinator: navigationCoordinator, preloadedResponse: response)))
             })
         
         Task { @MainActor [weak self] in
@@ -63,16 +64,4 @@ class SplashViewModel: ObservableObject {
         hasCompletedLogoAnimation.value = true
     }
     
-}
-
-extension SplashViewModel: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-}
-
-extension SplashViewModel: Equatable {
-    static func == (lhs: SplashViewModel, rhs: SplashViewModel) -> Bool {
-        return lhs.id == rhs.id
-    }
 }
