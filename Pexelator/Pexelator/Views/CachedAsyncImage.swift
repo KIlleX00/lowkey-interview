@@ -23,10 +23,11 @@ struct CachedAsyncImage<Content: View, Placeholder: View>: View {
     /// Initializes a `CachedAsyncImage` with a URL, content view, and placeholder view.
     /// - Parameters:
     ///   - url: The URL from which to load the image.
+    ///   - Parameter animated: If true, placeholder to image change will be animated.
     ///   - content: A closure that provides the content view to display when the image is loaded.
     ///   - placeholder: A closure that provides the placeholder view to display while the image is being loaded.
-    init(url: URL?, @ViewBuilder content: @escaping (Image) -> Content, @ViewBuilder placeholder: @escaping () -> Placeholder) {
-        _loader = StateObject(wrappedValue: CachedAsyncImageViewModel(url: url))
+    init(url: URL?, animated: Bool = true, @ViewBuilder content: @escaping (Image) -> Content, @ViewBuilder placeholder: @escaping () -> Placeholder) {
+        _loader = StateObject(wrappedValue: CachedAsyncImageViewModel(url: url, animated: animated))
         self.content = content
         self.placeholder = placeholder
     }

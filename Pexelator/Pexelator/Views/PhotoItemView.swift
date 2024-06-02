@@ -17,7 +17,7 @@ struct PhotoItemView: View {
     
     var body: some View {
         ZStack {
-            CachedAsyncImage(url: photo.url(for: imageWidth, scale: scale)) { image in
+            CachedAsyncImage(url: isExpanded ? photo.src.original : photo.url(for: imageWidth, scale: scale), animated: !isExpanded) { image in
                 image
                     .resizable()
                     .matchedGeometryEffect(id: "\(photo.id)image", in: namespace)

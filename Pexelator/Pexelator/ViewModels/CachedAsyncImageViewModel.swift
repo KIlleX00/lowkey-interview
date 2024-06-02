@@ -24,6 +24,9 @@ class CachedAsyncImageViewModel: ObservableObject {
     /// URL of the image to be loaded.
     private let url: URL?
     
+    /// If true, placeholder to image change will be animated.
+    private let animated: Bool
+    
     /// URL session data task for downloading the image.
     private var task: URLSessionDataTask?
     
@@ -34,8 +37,10 @@ class CachedAsyncImageViewModel: ObservableObject {
     
     /// Initializes the ViewModel with an optional URL.
     /// - Parameter url: The URL of the image to be loaded.
-    init(url: URL?) {
+    /// - Parameter animated: If true, placeholder to image change will be animated.
+    init(url: URL?, animated: Bool) {
         self.url = url
+        self.animated = animated
         if let url, let image = CachedAsyncImageViewModel.imageCache.object(forKey: url as NSURL) {
             self.image = image
         }
@@ -107,7 +112,7 @@ class CachedAsyncImageViewModel: ObservableObject {
             
             CachedAsyncImageViewModel.imageCache.setObject(image, forKey: url as NSURL)
             saveImageToDisk(image: image, url: url)
-            updateImage(image, animated: true)
+            updateImage(image, animated: animated)
         }
         task?.resume()
     }
@@ -138,7 +143,10 @@ class CachedAsyncImageViewModel: ObservableObject {
     /// - Parameter url: The URL of the image.
     /// - Returns: The file URL for the cached image.
     private func cachedImageUrl(for url: URL) -> URL? {
-        let fileName = url.lastPathComponent
+        var fileName = url.lastPathComponent
+        if let query = url.query() {
+           fileName += query
+        }
         guard let documentsURL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else { return nil }
         return documentsURL.appendingPathComponent(fileName)
     }
